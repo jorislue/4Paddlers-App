@@ -1,0 +1,106 @@
+<!DOCTYPE html> 
+<html>
+<script>
+$(document).ready(function(){
+    $(window).load(function() {$("#welcome").fadeOut('fast'); })
+});
+</script>
+<head>
+<meta charset="utf-8">
+<title>jQuery Mobile Web App</title>
+<link href="jquery.mobile-1.0.min.css" rel="stylesheet" type="text/css"/>
+<script src="jquery-1.6.4.min.js" type="text/javascript"></script>
+<script src="jquery.mobile-1.0.min.js" type="text/javascript"></script>
+</head> 
+<body> 
+
+
+
+<div id="mainscreen" data-role="page" data-theme="b">
+	<div data-role="header" data-theme="a">
+		<h1>4 Paddlers App</h1>
+	</div>
+    
+    <div onClick=window.open("http://www.4-paddlers.com") align="center" style="background-color:#FFF" >
+    <img id="pegelimg"" src="startpic.jpg">
+    </div>
+    
+	<div data-role="content">	
+		<ul data-role="listview">
+			<li><a href="#pegel">Live Pegel</a></li>
+            <li><a href="#flussfinden">Fluss finden</a></li>
+            <li><a href="#gefahrenmeldung">Gefahrenmeldung erstellen</a></li>
+		</ul>		
+	</div>
+	<div data-role="footer" data-theme="a">
+		<h4>Pegel,Flüsse & Meldungen</h4>
+	</div>
+</div>
+
+<!-- Seite: "Live Pegel" -->
+
+<section id="pegel" data-role="page" data-theme="c">
+<header data-role="header" data-theme="a"><h1>Live-Pegel</h1></header>
+	<div class="content" data-role="content" data-theme="c">
+	<h3>Pegelsuche<h3>
+	<form id="search" action="formprocessor.php" method="post">
+		<div data-role="fieldcontain">
+        <label for="searchriver">Suche nach Fluss:</label>
+        <input name="searchriver" type="search" id="searchriver" data-theme="c">
+		</div>
+        </form>
+        <h3>Flüsse mit Live-Pegel</h3>
+		<ol data-role="listview">
+		  <li><a href="#Lammer">Lammer</a></li>
+		  <li><a href="#">Saalach</a></li>
+		  <li><a href="#">Salzach</a></li>
+		</ol>
+        
+	</div>
+</section>
+
+<div data-role="page" id="Lammer" >
+	<div data-role="header" data-theme="b">
+		<h1>Lammer</h1>
+	</div>
+	<div data-role="content">
+     <h3 align="center">Derzeitiger Pegel:</h3>
+    	
+    <img id="pegelimg" src="http://4-paddlers.com/51/index.html?code=OVV1RZrzLLG8NUZy/KeVUNDZrbKqGR@BZytO/KuuO78fHAi2&ref=dc5517e1-bd3e-4891-9b2a-65264a81753f" >
+    
+	</div>
+<!-- Seite: "Fluss finden" -->
+
+<div data-role="page" id="flussfinden">
+	<div data-role="header">
+		<h1>Fluss finden</h1>
+	</div>
+	<div data-role="content">	
+    
+    <!-- Seite: "Fluss finden, INHALT" -->
+		Content		
+	</div>
+	
+</div>
+
+<!-- Seite: "Gefahrenmeldung" -->
+
+<div data-role="page" id="gefahrenmeldung">
+	<div data-role="header">
+		<h1>Page Four</h1>
+	</div>
+	<div data-role="content">
+    
+    <!-- Seite: "Gefahrenmeldung, INHALT" -->	
+		Content		
+	</div>
+	<div data-role="footer">
+		<h4>Page Footer</h4>
+	</div>
+</div>
+
+</body>
+
+
+
+</html>
